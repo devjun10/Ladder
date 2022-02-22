@@ -3,7 +3,7 @@ package ladder.view;
 import ladder.domain.ladder.Height;
 import ladder.domain.user.Name;
 import ladder.domain.user.Names;
-import ladder.system.Configuration;
+import ladder.system.ObjectFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class InputView {
     private static final String INPUT_PLAYER_NAMES = "참여할 사람 이름을 입력하세요. (이름은 쉼표(,)로 구분하세요)\nex) pobi,honux,crong,jk\n";
     private static final String INPUT_LADDER_HEIGHT = "최대 사다리 높이는 몇 개인가요?\n5\n";
     private static final String COMMA = ",";
-    static BufferedReader bufferReader = Configuration.bufferReader;
+    static BufferedReader bufferReader = ObjectFactory.bufferReader;
 
     private InputView() {
     }

@@ -1,11 +1,11 @@
 package ladder;
 
 import ladder.domain.GameManager;
-import ladder.system.Configuration;
+import ladder.system.ObjectFactory;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        GameManager gameManager = Configuration.gameManager;
+        GameManager gameManager = ObjectFactory.gameManager;
         gameManager.startGame();
     }
 }

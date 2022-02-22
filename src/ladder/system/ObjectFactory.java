@@ -10,9 +10,9 @@ import ladder.view.OutputView;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Configuration {
+public class ObjectFactory {
 
-    private Configuration() {}
+    private ObjectFactory() {}
     public static final BufferedReader bufferReader = new BufferedReader(new InputStreamReader(System.in));
     public static final StringBuilder stringBuilder = new StringBuilder();
     public static final RandomGenerator randomGenerator = RandomGenerator.getInstance();

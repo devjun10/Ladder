@@ -4,14 +4,14 @@ import ladder.domain.ladder.Height;
 import ladder.domain.ladder.Ladder;
 import ladder.domain.ladder.LadderLines;
 import ladder.domain.user.Names;
-import ladder.system.Configuration;
+import ladder.system.ObjectFactory;
 
 public class LadderGame {
 
     private Ladder ladder;
 
     private LadderGame (){
-        this.ladder = Configuration.ladder;
+        this.ladder = ObjectFactory.ladder;
     }
 
     private static final LadderGame instance = new LadderGame();

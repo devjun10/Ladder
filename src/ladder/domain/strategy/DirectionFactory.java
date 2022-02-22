@@ -2,7 +2,7 @@ package ladder.domain.strategy;
 
 import ladder.domain.ladder.Direction;
 import ladder.domain.ladder.Point;
-import ladder.system.Configuration;
+import ladder.system.ObjectFactory;
 
 import static java.lang.Boolean.FALSE;
 
@@ -11,7 +11,7 @@ public class DirectionFactory {
     private static final Boolean NONE = FALSE;
 
     public static Direction getFirstDirection() {
-        final boolean right = Configuration.randomGenerator.getBoolean();
+        final boolean right = ObjectFactory.randomGenerator.getBoolean();
         return new Direction(NONE, right);
     }
 
@@ -20,7 +20,7 @@ public class DirectionFactory {
         if (direction.hasRight()) {
             return new Direction(direction.getRight(), NONE);
         }
-        boolean next = Configuration.randomGenerator.getBoolean();
+        boolean next = ObjectFactory.randomGenerator.getBoolean();
         return new Direction(direction.getRight(), next);
     }
 
@@ -36,7 +36,7 @@ public class DirectionFactory {
 
     public static Direction getNextDirection(Direction direction) {
         boolean previous = direction.getRight();
-        boolean next = Configuration.randomGenerator.getBoolean();
+        boolean next = ObjectFactory.randomGenerator.getBoolean();
         return new Direction(previous, next);
     }
 }
